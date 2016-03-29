@@ -17,9 +17,9 @@ TEXMFSYSVAR $PosixTargetDir/texmf-var
 TEXMFVAR `$TEXMFSYSVAR
 binary_win32 1
 collection-basic 1
-collection-binextra 1
+collection-langenglish 1
+collection-langcyrillic 1
 collection-latex 1
-collection-latexrecommended 0
 collection-wintools 1
 in_place 0
 option_adjustrepo 1
@@ -50,4 +50,4 @@ Remove-Item -Path "$TargetDir\texmf-dist\source" -ErrorAction SilentlyContinue -
 
 $PackagePath = "$PSScriptRoot\texlive.7z"
 Remove-Item -Path $PackagePath -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -Force
-Invoke-Expression "7za a -mx9 $PackagePath $TargetDir"
+Invoke-Expression "7z a -mx9 $PackagePath $TargetDir"
